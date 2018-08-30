@@ -63,7 +63,8 @@ class GameList extends Component {
                     })}
                 </TableBody>
             </Table>
-      </Paper>    )
+      </Paper>
+    )
   }
 }
 

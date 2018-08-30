@@ -15,7 +15,7 @@ class App extends Component {
           <GameList />
         </CssBaseline>
       </React.Fragment>
-    );
+    )
   }
 }
 
