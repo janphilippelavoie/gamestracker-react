@@ -4,10 +4,10 @@ import { withStyles } from '@material-ui/core/styles'
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
-import IconButton from '@material-ui/core/IconButton'
-import MenuIcon from '@material-ui/icons/Menu'
 import Paper from '@material-ui/core/Paper'
-import {color2} from '../palette'
+import HamburgerMenu from './HamburgerMenu'
+import * as palette from '../palette'
+
 
 
 const styles = {
@@ -22,14 +22,16 @@ const styles = {
       marginRight: 20,
     },
     appBar: {
-        'background-color': color2
+        'background-color': palette.mainBold
     }
 };
 
 
 class TopNav extends Component {
 
-    
+  openMenu() {
+      alert('click')
+  }
 
   render() {
     const { classes } = this.props
@@ -37,9 +39,7 @@ class TopNav extends Component {
         <AppBar position="static" >
             <Paper>
             <Toolbar className={classes.appBar}>
-                <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
-                    <MenuIcon />
-                </IconButton>
+                <HamburgerMenu />
                 <Typography variant="title" color="inherit">
                     {this.props.title}
                 </Typography>
